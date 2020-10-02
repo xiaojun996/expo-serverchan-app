@@ -4,7 +4,7 @@ import * as React from 'react'
 import { ColorSchemeName } from 'react-native'
 
 import { RootStackParamList } from '../types'
-import Login from '../screens/Login'
+import Login from '../screens/LoginScreen'
 import BottomTabNavigator from './BottomTabNavigator'
 import NotFoundScreen from '../screens/NotFoundScreen'
 import LinkingConfiguration from './LinkingConfiguration'
@@ -35,7 +35,7 @@ function RootNavigator() {
     <Stack.Navigator initialRouteName="Login" screenOptions={{ headerShown: false }}>
       {/* 登录 页面 */}
       <Stack.Screen name="Login" component={Login} options={{ headerShown: true, headerTitle: '登录' }} />
-      {/* 根页面 */}
+      {/* 根 页面 */}
       <Stack.Screen name="Root" component={BottomTabNavigator} />
       {/* 没有找到 页面 */}
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ headerShown: true, headerTitle: '诶呀！没找到！' }} />

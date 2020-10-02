@@ -1,8 +1,8 @@
-import React from 'react'
 import { StackScreenProps } from '@react-navigation/stack'
-import { StyleSheet, View, Text } from 'react-native'
+import React from 'react'
+import { StyleSheet, View } from 'react-native'
 import { useDeviceOrientation } from '@react-native-community/hooks'
-import Constants from 'expo-constants'
+// import Constants from 'expo-constants'
 import { SocialIcon, Button } from 'react-native-elements'
 
 import { RootStackParamList } from '../types'
@@ -10,11 +10,11 @@ import { RootStackParamList } from '../types'
 /**
  * 登录
  */
-const LoginScreen = ({ navigation }: StackScreenProps<RootStackParamList, 'NotFound'>) => {
+export default function LoginScreen({ navigation }: StackScreenProps<RootStackParamList, 'Login'>) {
   // 判断是否垂直显示
   const { portrait } = useDeviceOrientation()
   return (
-    <View style={[LoginStyles.container, !portrait && { paddingTop: 0 }]}>
+    <View style={[styles.container, !portrait && { paddingTop: 0 }]}>
       <View style={{ width: '100%', flexDirection: 'row', justifyContent: 'space-evenly' }}>
         <SocialIcon type="twitter" />
         <SocialIcon type="gitlab" />
@@ -26,13 +26,11 @@ const LoginScreen = ({ navigation }: StackScreenProps<RootStackParamList, 'NotFo
   )
 }
 
-const LoginStyles = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'flex-start',
+    justifyContent: 'space-evenly',
     alignItems: 'center',
-    paddingTop: Constants.statusBarHeight, // 刘海状态栏的安全距离
+    // paddingTop: Constants.statusBarHeight, // 刘海状态栏的安全距离
   },
 })
-
-export default LoginScreen
