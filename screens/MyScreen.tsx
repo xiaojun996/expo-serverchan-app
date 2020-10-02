@@ -32,13 +32,13 @@ export default function MyScreen({ navigation }: StackScreenProps<RootStackParam
         >
           <View style={{ flexDirection: 'row', width: '100%' }}>
             <Image
-              source={{ uri: 'https://cdn.jsdelivr.net/gh/xiaojun996/CDN/images/wechat-img.png' }}
+              source={{ uri: 'https://cdn.jsdelivr.net/gh/xiaojun996/CDN/images/profile/02.比企谷八幡.png' }}
               style={{ width: 64, height: 64, marginLeft: 24, marginRight: 24, borderRadius: 5 }}
             />
 
             <View style={{ justifyContent: 'space-between', paddingTop: 4, paddingBottom: 4 }}>
               <Text style={{ fontSize: 22, fontWeight: 'bold' }}>晓</Text>
-              <Text style={{ fontSize: 16, fontWeight: '200' }}>WeChat Id: Aishiteru996</Text>
+              <Text style={{ fontSize: 16, fontWeight: '200' }}>WeChat ID: Aishiteru996</Text>
             </View>
           </View>
         </View>
