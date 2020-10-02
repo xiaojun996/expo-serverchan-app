@@ -1,7 +1,7 @@
 /**
  * 颜色常量
  */
-const tintColorLight = '#2f95dc'
+const tintColorLight = '#88def9'
 const tintColorDark = '#fff'
 
 export default {
