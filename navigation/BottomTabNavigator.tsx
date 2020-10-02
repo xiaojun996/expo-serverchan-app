@@ -1,6 +1,3 @@
-/**
- * 底部导航标签按钮
- */
 import { Ionicons } from '@expo/vector-icons'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { createStackNavigator } from '@react-navigation/stack'
@@ -11,12 +8,18 @@ import useColorScheme from '../hooks/useColorScheme'
 import TabOneScreen from '../screens/TabOneScreen'
 import TabTwoScreen from '../screens/TabTwoScreen'
 import FavoritesScreen from '../screens/FavoritesScreen'
-import FavoritesSvg from '../assets/svgs/FavoritesSvg'
+import MyScreen from '../screens/MyScreen'
 
-import { BottomTabParamList, TabOneParamList, TabTwoParamList, FavoritesParamList } from '../types'
+import FavoritesSvg from '../assets/svgs/FavoritesSvg'
+import MySvg from '../assets/svgs/MySvg'
+
+import { BottomTabParamList, TabOneParamList, TabTwoParamList, FavoritesParamList, MyParamList } from '../types'
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>()
 
+/**
+ * 底部导航标签按钮
+ */
 export default function BottomTabNavigator() {
   const colorScheme = useColorScheme()
 
@@ -48,6 +51,15 @@ export default function BottomTabNavigator() {
           title: 'Favorites',
           tabBarBadge: `···`,
           tabBarIcon: ({ size, color }) => <FavoritesSvg width={size} height={size} color={color} />,
+        }}
+      />
+      <BottomTab.Screen
+        name="My"
+        component={MyNavigator}
+        options={{
+          title: 'My',
+          tabBarBadge: `···`,
+          tabBarIcon: ({ size, color }) => <MySvg width={size} height={size} color={color} />,
         }}
       />
     </BottomTab.Navigator>
@@ -102,8 +114,21 @@ function FavoritesNavigator() {
       <FavoritesStack.Screen
         name="FavoritesScreen"
         component={FavoritesScreen}
-        options={{ headerTitle: 'Favorites' }}
+        options={{ headerTitle: 'Favorites', headerShown: false }}
       />
     </FavoritesStack.Navigator>
+  )
+}
+
+/**
+ * 我的 堆栈
+ */
+const MyStack = createStackNavigator<MyParamList>()
+
+function MyNavigator() {
+  return (
+    <MyStack.Navigator>
+      <MyStack.Screen name="MyScreen" component={MyScreen} options={{ headerTitle: 'My', headerShown: false }} />
+    </MyStack.Navigator>
   )
 }

@@ -3,6 +3,7 @@ import { ScrollView, View, StyleSheet } from 'react-native'
 import { SearchBar, ListItem, Avatar } from 'react-native-elements'
 import { useDeviceOrientation } from '@react-native-community/hooks'
 import { LinearGradient } from 'expo-linear-gradient'
+import Constants from 'expo-constants'
 
 /**
  * 收藏夹
@@ -159,7 +160,7 @@ export default function FavoritesScreen() {
 
   return (
     <ScrollView>
-      <View style={[FavoritesStyle.container, !portrait && { paddingTop: 0 }]}>
+      <View style={[styles.container, !portrait && { paddingTop: 0 }]}>
         <SearchBar
           placeholder="查找"
           cancelButtonTitle={'取消'}
@@ -203,11 +204,12 @@ export default function FavoritesScreen() {
   )
 }
 
-const FavoritesStyle = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    paddingTop: Constants.statusBarHeight, // 刘海状态栏的安全距离
   },
   Text: {
     fontSize: 30,
