@@ -8,8 +8,10 @@ import { RootStackParamList } from '../types'
 import BottomTabNavigator from './BottomTabNavigator'
 import LinkingConfiguration from './LinkingConfiguration'
 
-// If you are not familiar with React Navigation, we recommend going through the
-// "Fundamentals" guide: https://reactnavigation.org/docs/getting-started
+/**
+ * 如果您不熟悉React Navigation，建议您进行
+ * <基础知识> 指南： https://reactnavigation.org/docs/getting-started
+ */
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
     <NavigationContainer linking={LinkingConfiguration} theme={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
@@ -18,10 +20,15 @@ export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeNa
   )
 }
 
-// A root stack navigator is often used for displaying modals on top of all other content
-// Read more here: https://reactnavigation.org/docs/modal
+/**
+ * 根堆栈导航器通常用于在所有其他内容之上显示模式
+ * 在这里阅读更多: https://reactnavigation.org/docs/modal
+ */
 const Stack = createStackNavigator<RootStackParamList>()
 
+/**
+ * 根导航器
+ */
 function RootNavigator() {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
