@@ -58,7 +58,7 @@ export default function BottomTabNavigator() {
         component={MyNavigator}
         options={{
           title: 'My',
-          tabBarBadge: `···`,
+          tabBarBadge: `1`,
           tabBarIcon: ({ size, color }) => <MySvg width={size} height={size} color={color} />,
         }}
       />
