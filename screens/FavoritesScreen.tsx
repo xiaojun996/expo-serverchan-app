@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { ScrollView, View, StyleSheet } from 'react-native'
 import { SearchBar, ListItem, Avatar } from 'react-native-elements'
 import { useDeviceOrientation } from '@react-native-community/hooks'
-// import Constants from 'expo-constants'
+import { LinearGradient } from 'expo-linear-gradient'
 
 /**
  * 收藏夹
@@ -170,30 +170,31 @@ const FavoritesScreen = () => {
 
         <View style={{ width: '100%', paddingLeft: 8, paddingRight: 8 }}>
           {List.map(item => (
-            <ListItem
-              key={item.title}
-              // linearGradientProps={{
-              //   colors: ['#FF9800', '#F44336'],
-              //   start: { x: 1, y: 0 },
-              //   end: { x: 0.2, y: 0 },
-              // }}
-              containerStyle={{
-                borderRadius: 9,
-                marginBottom: 9,
-                backgroundColor: 'red',
-              }}
+            <LinearGradient
+              // Background Linear Gradient
+              colors={['#FF9800', '#F44336']}
+              start={{ x: 1, y: 0 }}
+              end={{ x: 0.2, y: 0 }}
+              style={{ width: '100%', marginBottom: 9, borderRadius: 9 }}
             >
-              {/* 头像 */}
-              <Avatar {...item.leftAvatar} />
+              <ListItem
+                key={item.title}
+                containerStyle={{
+                  backgroundColor: 'transparent',
+                }}
+              >
+                {/* 头像 */}
+                <Avatar {...item.leftAvatar} />
 
-              {/* listitem内容 */}
-              <ListItem.Content>
-                <ListItem.Title style={item.titleStyle}>{item.title}</ListItem.Title>
-                <ListItem.Subtitle style={{ color: 'white' }}>{item.subtitle}</ListItem.Subtitle>
-              </ListItem.Content>
+                {/* listitem内容 */}
+                <ListItem.Content>
+                  <ListItem.Title style={item.titleStyle}>{item.title}</ListItem.Title>
+                  <ListItem.Subtitle style={{ color: 'white' }}>{item.subtitle}</ListItem.Subtitle>
+                </ListItem.Content>
 
-              <ListItem.Chevron color="white" />
-            </ListItem>
+                <ListItem.Chevron color="white" />
+              </ListItem>
+            </LinearGradient>
           ))}
         </View>
       </View>
@@ -206,7 +207,6 @@ const FavoritesStyle = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    // paddingTop: Constants.statusBarHeight, // 刘海状态栏的安全距离
   },
   Text: {
     fontSize: 30,
