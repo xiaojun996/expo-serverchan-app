@@ -7,8 +7,9 @@ import { LinearGradient } from 'expo-linear-gradient'
 /**
  * 收藏夹
  */
-const FavoritesScreen = () => {
-  const { portrait } = useDeviceOrientation() // 判断是否垂直显示
+export default function FavoritesScreen() {
+  // 判断是否垂直显示
+  const { portrait } = useDeviceOrientation()
   const [search, setSearch] = useState('')
   const updateSearch = (search: any) => setSearch(search)
 
@@ -212,5 +213,3 @@ const FavoritesStyle = StyleSheet.create({
     fontSize: 30,
   },
 })
-
-export default FavoritesScreen
