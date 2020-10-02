@@ -1,3 +1,6 @@
+/**
+ * 颜色常量
+ */
 const tintColorLight = '#2f95dc'
 const tintColorDark = '#fff'
 

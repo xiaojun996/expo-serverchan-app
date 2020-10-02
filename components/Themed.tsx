@@ -1,3 +1,6 @@
+/**
+ * 主题
+ */
 import * as React from 'react'
 import { Text as DefaultText, View as DefaultView } from 'react-native'
 
