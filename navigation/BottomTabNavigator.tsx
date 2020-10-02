@@ -21,7 +21,10 @@ export default function BottomTabNavigator() {
   const colorScheme = useColorScheme()
 
   return (
-    <BottomTab.Navigator initialRouteName="TabOne" tabBarOptions={{ activeTintColor: Colors[colorScheme].tint }}>
+    <BottomTab.Navigator
+      initialRouteName="TabOne"
+      tabBarOptions={{ activeTintColor: Colors[colorScheme].tint, labelStyle: { fontSize: 14 } }}
+    >
       <BottomTab.Screen
         name="TabOne"
         component={TabOneNavigator}
@@ -42,7 +45,7 @@ export default function BottomTabNavigator() {
         name="Favorites"
         component={FavoritesNavigator}
         options={{
-          title: '收藏夹',
+          title: 'Favorites',
           tabBarBadge: `···`,
           tabBarIcon: ({ size, color }) => <FavoritesSvg width={size} height={size} color={color} />,
         }}
@@ -99,7 +102,7 @@ function FavoritesNavigator() {
       <FavoritesStack.Screen
         name="FavoritesScreen"
         component={FavoritesScreen}
-        options={{ headerTitle: 'Favorites Title' }}
+        options={{ headerTitle: 'Favorites' }}
       />
     </FavoritesStack.Navigator>
   )

@@ -231,10 +231,10 @@ const FavoritesScreen = () => {
           {List.map(item => (
             <ListItem
               Component={TouchableScale}
-              // friction={90}
-              // tension={100} // These props are passed to the parent component (here TouchableScale)
-              // activeScale={0.95} //
-              // linearGradientProps={item.linearGradientProps}
+              friction={90}
+              tension={100} // These props are passed to the parent component (here TouchableScale)
+              activeScale={0.95} //
+              linearGradientProps={item.linearGradientProps}
               containerStyle={{ borderRadius: 9, marginBottom: 9 }}
             >
               {/* 头像 */}
