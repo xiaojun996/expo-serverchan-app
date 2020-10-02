@@ -4,9 +4,6 @@ import { SearchBar, ListItem, Avatar } from 'react-native-elements'
 import { useDeviceOrientation } from '@react-native-community/hooks'
 // import Constants from 'expo-constants'
 
-// https://github.com/kohver/react-native-touchable-scale
-import TouchableScale from 'react-native-touchable-scale'
-
 /**
  * 收藏夹
  */
@@ -19,7 +16,6 @@ const FavoritesScreen = () => {
     title: string
     subtitle: string
     leftAvatar: object
-    linearGradientProps: object
     titleStyle: object
   }
 
@@ -34,11 +30,6 @@ const FavoritesScreen = () => {
             'https://bkimg.cdn.bcebos.com/pic/6c224f4a20a44623868034569022720e0cf3d7b8?x-bce-process=image/watermark,image_d2F0ZXIvYmFpa2U3Mg==,g_7,xp_5,yp_5',
         },
       },
-      linearGradientProps: {
-        colors: ['#FF9800', '#F44336'],
-        start: { x: 1, y: 0 },
-        end: { x: 0.2, y: 0 },
-      },
       titleStyle: { color: 'white', fontWeight: 'bold' },
     },
     {
@@ -50,11 +41,6 @@ const FavoritesScreen = () => {
           uri:
             'https://bkimg.cdn.bcebos.com/pic/58ee3d6d55fbb2fbc96fc926474a20a44623dcba?x-bce-process=image/resize,m_lfit,w_220,limit_1',
         },
-      },
-      linearGradientProps: {
-        colors: ['#FF9800', '#F44336'],
-        start: { x: 1, y: 0 },
-        end: { x: 0.2, y: 0 },
       },
       titleStyle: { color: 'white', fontWeight: 'bold' },
     },
@@ -68,11 +54,6 @@ const FavoritesScreen = () => {
             'https://bkimg.cdn.bcebos.com/pic/55e736d12f2eb93848cfe7c6dd628535e5dd6f60?x-bce-process=image/resize,m_lfit,w_220,limit_1',
         },
       },
-      linearGradientProps: {
-        colors: ['#FF9800', '#F44336'],
-        start: { x: 1, y: 0 },
-        end: { x: 0.2, y: 0 },
-      },
       titleStyle: { color: 'white', fontWeight: 'bold' },
     },
     {
@@ -84,11 +65,6 @@ const FavoritesScreen = () => {
           uri:
             'https://bkimg.cdn.bcebos.com/pic/14ce36d3d539b60092419183e150352ac65cb773?x-bce-process=image/resize,m_lfit,w_220,limit_1',
         },
-      },
-      linearGradientProps: {
-        colors: ['#FF9800', '#F44336'],
-        start: { x: 1, y: 0 },
-        end: { x: 0.2, y: 0 },
       },
       titleStyle: { color: 'white', fontWeight: 'bold' },
     },
@@ -102,11 +78,6 @@ const FavoritesScreen = () => {
             'https://bkimg.cdn.bcebos.com/pic/dc54564e9258d10941023786d958ccbf6c814d25?x-bce-process=image/resize,m_lfit,w_220,limit_1',
         },
       },
-      linearGradientProps: {
-        colors: ['#FF9800', '#F44336'],
-        start: { x: 1, y: 0 },
-        end: { x: 0.2, y: 0 },
-      },
       titleStyle: { color: 'white', fontWeight: 'bold' },
     },
     {
@@ -118,11 +89,6 @@ const FavoritesScreen = () => {
           uri:
             'https://bkimg.cdn.bcebos.com/pic/d01373f082025aaf99d0e0fff3edab64034f1a27?x-bce-process=image/resize,m_lfit,w_220,limit_1',
         },
-      },
-      linearGradientProps: {
-        colors: ['#FF9800', '#F44336'],
-        start: { x: 1, y: 0 },
-        end: { x: 0.2, y: 0 },
       },
       titleStyle: { color: 'white', fontWeight: 'bold' },
     },
@@ -137,11 +103,6 @@ const FavoritesScreen = () => {
             'https://bkimg.cdn.bcebos.com/pic/9825bc315c6034a8b6ea21b5c3134954092376fe?x-bce-process=image/resize,m_lfit,w_220,limit_1',
         },
       },
-      linearGradientProps: {
-        colors: ['#FF9800', '#F44336'],
-        start: { x: 1, y: 0 },
-        end: { x: 0.2, y: 0 },
-      },
       titleStyle: { color: 'white', fontWeight: 'bold' },
     },
     {
@@ -155,11 +116,6 @@ const FavoritesScreen = () => {
             'https://bkimg.cdn.bcebos.com/pic/a686c9177f3e67094ff45ed232c79f3df8dc5522?x-bce-process=image/resize,m_lfit,w_220,limit_1',
         },
       },
-      linearGradientProps: {
-        colors: ['#FF9800', '#F44336'],
-        start: { x: 1, y: 0 },
-        end: { x: 0.2, y: 0 },
-      },
       titleStyle: { color: 'white', fontWeight: 'bold' },
     },
     {
@@ -171,11 +127,6 @@ const FavoritesScreen = () => {
           uri:
             'https://bkimg.cdn.bcebos.com/pic/a50f4bfbfbedab642db9c500fe36afc378311e22?x-bce-process=image/resize,m_lfit,w_220,limit_1',
         },
-      },
-      linearGradientProps: {
-        colors: ['#FF9800', '#F44336'],
-        start: { x: 1, y: 0 },
-        end: { x: 0.2, y: 0 },
       },
       titleStyle: { color: 'white', fontWeight: 'bold' },
     },
@@ -189,11 +140,6 @@ const FavoritesScreen = () => {
             'https://bkimg.cdn.bcebos.com/pic/902397dda144ad346dee82aad9a20cf431ad854d?x-bce-process=image/resize,m_lfit,w_220,limit_1',
         },
       },
-      linearGradientProps: {
-        colors: ['#FF9800', '#F44336'],
-        start: { x: 1, y: 0 },
-        end: { x: 0.2, y: 0 },
-      },
       titleStyle: { color: 'white', fontWeight: 'bold' },
     },
     {
@@ -205,11 +151,6 @@ const FavoritesScreen = () => {
           uri:
             'https://bkimg.cdn.bcebos.com/pic/242dd42a2834349b1eb675a8c0ea15ce36d3be6e?x-bce-process=image/resize,m_lfit,w_220,limit_1',
         },
-      },
-      linearGradientProps: {
-        colors: ['#FF9800', '#F44336'],
-        start: { x: 1, y: 0 },
-        end: { x: 0.2, y: 0 },
       },
       titleStyle: { color: 'white', fontWeight: 'bold' },
     },
@@ -230,12 +171,17 @@ const FavoritesScreen = () => {
         <View style={{ width: '100%', paddingLeft: 8, paddingRight: 8 }}>
           {List.map(item => (
             <ListItem
-              Component={TouchableScale}
-              friction={90}
-              tension={100} // These props are passed to the parent component (here TouchableScale)
-              activeScale={0.95} //
-              linearGradientProps={item.linearGradientProps}
-              containerStyle={{ borderRadius: 9, marginBottom: 9 }}
+              key={item.title}
+              // linearGradientProps={{
+              //   colors: ['#FF9800', '#F44336'],
+              //   start: { x: 1, y: 0 },
+              //   end: { x: 0.2, y: 0 },
+              // }}
+              containerStyle={{
+                borderRadius: 9,
+                marginBottom: 9,
+                backgroundColor: 'red',
+              }}
             >
               {/* 头像 */}
               <Avatar {...item.leftAvatar} />
