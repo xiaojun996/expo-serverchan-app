@@ -45,7 +45,7 @@ export default function MyScreen({ navigation }: StackScreenProps<RootStackParam
 
         {/* NotFound */}
         <View style={{ width: '100%', paddingTop: 8 }}>
-          <ListItem onPress={() => navigation.push('NotFound')}>
+          <ListItem onPress={() => navigation.push('Setting')}>
             <SettingSvg width={24} height={24} />
 
             <ListItem.Content>

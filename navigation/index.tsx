@@ -1,13 +1,16 @@
 import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
-import * as React from 'react'
 import { ColorSchemeName } from 'react-native'
+import React from 'react'
 
-import { RootStackParamList } from '../types'
 import Login from '../screens/LoginScreen'
 import BottomTabNavigator from './BottomTabNavigator'
 import NotFoundScreen from '../screens/NotFoundScreen'
+import SettingScreen from '../screens/SettingScreen'
+
 import LinkingConfiguration from './LinkingConfiguration'
+
+import { RootStackParamList } from '../types'
 
 /**
  * 如果您不熟悉React Navigation，建议您进行
@@ -45,6 +48,9 @@ function RootNavigator() {
         component={NotFoundScreen}
         options={{ headerShown: true, headerTitle: '诶呀！没找到！' }}
       />
+
+      {/* 设置 页面 */}
+      <Stack.Screen name="Setting" component={SettingScreen} options={{ headerShown: true, headerTitle: '设置' }} />
     </Stack.Navigator>
   )
 }
