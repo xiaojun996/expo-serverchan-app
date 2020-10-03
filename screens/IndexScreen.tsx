@@ -1,12 +1,13 @@
-import { StyleSheet, ScrollView, View, Button, Text, TouchableHighlight, Image, Alert } from 'react-native'
+import { StyleSheet, Button, TouchableHighlight, Image, Alert } from 'react-native'
 import { useDeviceOrientation } from '@react-native-community/hooks'
 import { StackScreenProps } from '@react-navigation/stack'
 import { CommonActions } from '@react-navigation/native'
 import Constants from 'expo-constants'
 import React from 'react'
 
-import { RootStackParamList } from '../types'
+import { Text, View, ScrollView } from '../components/Themed'
 
+import { RootStackParamList } from '../types'
 /**
  * 首页
  */
