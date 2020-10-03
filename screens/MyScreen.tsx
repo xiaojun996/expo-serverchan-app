@@ -12,7 +12,7 @@ import { RootStackParamList } from '../types'
 /**
  * 我的
  */
-export default function MyScreen({ navigation }: StackScreenProps<RootStackParamList, 'My'>) {
+export default function MyScreen({ navigation }: StackScreenProps<RootStackParamList, 'Root'>) {
   const { portrait } = useDeviceOrientation() // 判断是否垂直显示
   return (
     <ScrollView>

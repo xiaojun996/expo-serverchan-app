@@ -1,9 +1,8 @@
-import { StackScreenProps } from '@react-navigation/stack'
-import React from 'react'
-import { StyleSheet, View } from 'react-native'
 import { useDeviceOrientation } from '@react-native-community/hooks'
-// import Constants from 'expo-constants'
 import { SocialIcon, Button } from 'react-native-elements'
+import { StackScreenProps } from '@react-navigation/stack'
+import { StyleSheet, View } from 'react-native'
+import React from 'react'
 
 import { RootStackParamList } from '../types'
 
@@ -31,6 +30,5 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'space-evenly',
     alignItems: 'center',
-    // paddingTop: Constants.statusBarHeight, // 刘海状态栏的安全距离
   },
 })

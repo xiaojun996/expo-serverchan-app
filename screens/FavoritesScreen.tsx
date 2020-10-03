@@ -178,9 +178,9 @@ export default function FavoritesScreen() {
               start={{ x: 1, y: 0 }}
               end={{ x: 0.2, y: 0 }}
               style={{ width: '100%', marginBottom: 9, borderRadius: 9 }}
+              key={item.title}
             >
               <ListItem
-                key={item.title}
                 containerStyle={{
                   backgroundColor: 'transparent',
                 }}

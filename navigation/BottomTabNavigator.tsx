@@ -5,6 +5,8 @@ import * as React from 'react'
 
 import Colors from '../constants/Colors'
 import useColorScheme from '../hooks/useColorScheme'
+
+import IndexScreen from '../screens/IndexScreen'
 import TabOneScreen from '../screens/TabOneScreen'
 import TabTwoScreen from '../screens/TabTwoScreen'
 import FavoritesScreen from '../screens/FavoritesScreen'
@@ -12,8 +14,9 @@ import MyScreen from '../screens/MyScreen'
 
 import FavoritesSvg from '../assets/svgs/FavoritesSvg'
 import MySvg from '../assets/svgs/MySvg'
+import IndexSvg from '../assets/svgs/IndexSvg'
 
-import { BottomTabParamList, TabOneParamList, TabTwoParamList, FavoritesParamList, MyParamList } from '../types'
+import { BottomTabParamList,IndexParamList, TabOneParamList, TabTwoParamList, FavoritesParamList, MyParamList } from '../types'
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>()
 
@@ -25,9 +28,18 @@ export default function BottomTabNavigator() {
 
   return (
     <BottomTab.Navigator
-      initialRouteName="TabOne"
+      initialRouteName="Index"
       tabBarOptions={{ activeTintColor: Colors[colorScheme].tint, labelStyle: { fontSize: 14 } }}
     >
+      <BottomTab.Screen
+        name="Index"
+        component={IndexNavigator}
+        options={{
+          title: 'Index',
+          tabBarBadge: undefined,
+          tabBarIcon: ({ size, color }) => <IndexSvg width={size} height={size} color={color} />,
+        }}
+      />
       <BottomTab.Screen
         name="TabOne"
         component={TabOneNavigator}
@@ -76,6 +88,19 @@ function TabBarIcon(props: { name: string; color: string }) {
 // Each tab has its own navigation stack, you can read more about this pattern here:
 // 每个标签都有自己的导航堆栈，您可以在此处阅读有关此模式的更多信息：:
 // https://reactnavigation.org/docs/tab-based-navigation#a-stack-navigator-for-each-tab
+
+/**
+ * 首页 堆栈
+ */
+const IndexStack = createStackNavigator<IndexParamList>()
+
+function IndexNavigator() {
+  return (
+    <IndexStack.Navigator>
+      <IndexStack.Screen name="IndexScreen" component={IndexScreen} options={{ headerTitle: 'Index', headerShown: false }} />
+    </IndexStack.Navigator>
+  )
+}
 
 /**
  * 标签一 堆栈

@@ -1,16 +1,20 @@
 export type RootStackParamList = {
-  Root: undefined
   Login: undefined
+  Root: undefined
   NotFound: undefined
-  My: undefined
   Setting: undefined
 }
 
 export type BottomTabParamList = {
+  Index: undefined
   TabOne: undefined
   TabTwo: undefined
   Favorites: undefined
   My: undefined
+}
+
+export type IndexParamList = {
+  IndexScreen: undefined
 }
 
 export type TabOneParamList = {
