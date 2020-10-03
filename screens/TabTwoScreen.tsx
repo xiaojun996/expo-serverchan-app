@@ -7,9 +7,9 @@ import { Text, View } from '../components/Themed'
 export default function TabTwoScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>标签二</Text>
+      <Text style={styles.title}>xiaojun996</Text>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="/screens/TabTwoScreen.js" />
+      <EditScreenInfo path="/screens/TabTwoScreen.js" url="https://xiaojun996.top" />
     </View>
   )
 }
