@@ -61,13 +61,15 @@ export default function IndexScreen({ navigation }: StackScreenProps<RootStackPa
         <Button
           title="Go to 详情"
           onPress={() =>
-            CommonActions.navigate({
-              name: 'Details',
-              params: {
-                id: 123,
-                text: 'ahhahaha',
-              },
-            })
+            navigation.dispatch(
+              CommonActions.navigate({
+                name: 'Details',
+                params: {
+                  id: 123,
+                  text: 'ahhahaha',
+                },
+              })
+            )
           }
         />
       </View>

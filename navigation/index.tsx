@@ -7,6 +7,7 @@ import Login from '../screens/LoginScreen'
 import BottomTabNavigator from './BottomTabNavigator'
 import NotFoundScreen from '../screens/NotFoundScreen'
 import SettingScreen from '../screens/SettingScreen'
+import DetailsScreen from '../screens/DetailsScreen'
 
 import LinkingConfiguration from './LinkingConfiguration'
 
@@ -51,6 +52,9 @@ function RootNavigator() {
 
       {/* 设置 页面 */}
       <Stack.Screen name="Setting" component={SettingScreen} options={{ headerShown: true, headerTitle: '设置' }} />
+
+      {/* 详情 页面 */}
+      <Stack.Screen name="Details" component={DetailsScreen} options={{ headerShown: true, headerTitle: '详情' }} />
     </Stack.Navigator>
   )
 }
