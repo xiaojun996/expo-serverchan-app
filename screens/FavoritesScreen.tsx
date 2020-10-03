@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
-import { ScrollView, View, StyleSheet } from 'react-native'
+import { StyleSheet } from 'react-native'
 import { SearchBar, ListItem, Avatar } from 'react-native-elements'
 import { useDeviceOrientation } from '@react-native-community/hooks'
 import { LinearGradient } from 'expo-linear-gradient'
 import Constants from 'expo-constants'
+
+import { ScrollView, View } from '../components/Themed'
 
 /**
  * 收藏夹
@@ -167,7 +169,7 @@ export default function FavoritesScreen() {
           onChangeText={updateSearch}
           value={search}
           platform={'ios'}
-          containerStyle={{ backgroundColor: '#f2f2f2' }}
+          containerStyle={{ backgroundColor: '#121212' }}
         />
 
         <View style={{ width: '100%', paddingLeft: 8, paddingRight: 8 }}>

@@ -27,7 +27,11 @@ export default function MeScreen({ navigation }: StackScreenProps<RootStackParam
               style={{ width: 64, height: 64, marginLeft: 24, marginRight: 24, borderRadius: 5 }}
             />
 
-            <View style={{ justifyContent: 'space-between', paddingTop: 4, paddingBottom: 4 }} lightColor="#fff" darkColor="#202020">
+            <View
+              style={{ justifyContent: 'space-between', paddingTop: 4, paddingBottom: 4 }}
+              lightColor="#fff"
+              darkColor="#202020"
+            >
               <Text style={{ fontSize: 22, fontWeight: 'bold' }}>晓</Text>
               <Text style={{ fontSize: 16, fontWeight: '200' }}>WeChat ID: Aishiteru996</Text>
             </View>
@@ -36,12 +40,13 @@ export default function MeScreen({ navigation }: StackScreenProps<RootStackParam
 
         {/* NotFound */}
         <View style={{ width: '100%', paddingTop: 8 }}>
-          <ListItem onPress={() => navigation.push('Setting')}>
+          <ListItem onPress={() => navigation.push('Setting')} containerStyle={{ backgroundColor: '#202020' }}>
             <SettingSvg width={24} height={24} />
 
             <ListItem.Content>
-              <ListItem.Title>{'Setting'}</ListItem.Title>
+              <ListItem.Title style={{ color: '#fff' }}>{'Setting'}</ListItem.Title>
             </ListItem.Content>
+
             <ListItem.Chevron />
           </ListItem>
         </View>
