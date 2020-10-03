@@ -27,7 +27,7 @@ export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeNa
 
 /**
  * 根堆栈导航器通常用于在所有其他内容之上显示模式
- * 在这里阅读更多: https://reactnavigation.org/docs/modal
+ * 阅读更多: https://reactnavigation.org/docs/modal
  */
 const Stack = createStackNavigator<RootStackParamList>()
 
