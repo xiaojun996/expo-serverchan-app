@@ -10,13 +10,13 @@ import IndexScreen from '../screens/IndexScreen'
 import TabOneScreen from '../screens/TabOneScreen'
 import TabTwoScreen from '../screens/TabTwoScreen'
 import FavoritesScreen from '../screens/FavoritesScreen'
-import MyScreen from '../screens/MyScreen'
+import MeScreen from '../screens/MeScreen'
 
 import FavoritesSvg from '../assets/svgs/FavoritesSvg'
-import MySvg from '../assets/svgs/MySvg'
+import MeSvg from '../assets/svgs/MeSvg'
 import IndexSvg from '../assets/svgs/IndexSvg'
 
-import { BottomTabParamList,IndexParamList, TabOneParamList, TabTwoParamList, FavoritesParamList, MyParamList } from '../types'
+import { BottomTabParamList,IndexParamList, TabOneParamList, TabTwoParamList, FavoritesParamList, MeParamList } from '../types'
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>()
 
@@ -66,12 +66,12 @@ export default function BottomTabNavigator() {
         }}
       />
       <BottomTab.Screen
-        name="My"
-        component={MyNavigator}
+        name="Me"
+        component={MeNavigator}
         options={{
-          title: 'My',
+          title: 'Me',
           tabBarBadge: `1`,
-          tabBarIcon: ({ size, color }) => <MySvg width={size} height={size} color={color} />,
+          tabBarIcon: ({ size, color }) => <MeSvg width={size} height={size} color={color} />,
         }}
       />
     </BottomTab.Navigator>
@@ -148,12 +148,12 @@ function FavoritesNavigator() {
 /**
  * 我的 堆栈
  */
-const MyStack = createStackNavigator<MyParamList>()
+const MeStack = createStackNavigator<MeParamList>()
 
-function MyNavigator() {
+function MeNavigator() {
   return (
-    <MyStack.Navigator>
-      <MyStack.Screen name="MyScreen" component={MyScreen} options={{ headerTitle: 'My', headerShown: false }} />
-    </MyStack.Navigator>
+    <MeStack.Navigator>
+      <MeStack.Screen name="MeScreen" component={MeScreen} options={{ headerTitle: 'Me', headerShown: false }} />
+    </MeStack.Navigator>
   )
 }

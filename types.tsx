@@ -11,7 +11,7 @@ export type BottomTabParamList = {
   TabOne: undefined
   TabTwo: undefined
   Favorites: undefined
-  My: undefined
+  Me: undefined
 }
 
 export type IndexParamList = {
@@ -30,6 +30,6 @@ export type FavoritesParamList = {
   FavoritesScreen: undefined
 }
 
-export type MyParamList = {
-  MyScreen: undefined
+export type MeParamList = {
+  MeScreen: undefined
 }

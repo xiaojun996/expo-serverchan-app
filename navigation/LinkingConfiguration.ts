@@ -21,7 +21,7 @@ export default {
               TabTwoScreen: 'two',
             },
           },
-          My: {
+          Me: {
             /**
              * '/user/wojciech/settings'
              * { id: 'user-wojciech' section: 'settings' }

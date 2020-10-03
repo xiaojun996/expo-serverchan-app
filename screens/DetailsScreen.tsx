@@ -70,7 +70,7 @@ export default function DetailsScreen({
           onPress={() =>
             navigation.dispatch(
               CommonActions.navigate({
-                name: 'My',
+                name: 'Me',
               })
             )
           }
