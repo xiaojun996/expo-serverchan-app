@@ -1,9 +1,11 @@
 import { useDeviceOrientation } from '@react-native-community/hooks'
 import { StackScreenProps } from '@react-navigation/stack'
 import { CommonActions } from '@react-navigation/native'
-import { StyleSheet, View } from 'react-native'
+import { StyleSheet } from 'react-native'
 import { ListItem } from 'react-native-elements'
 import React from 'react'
+
+import { View } from '../components/Themed'
 
 import { RootStackParamList } from '../types'
 
