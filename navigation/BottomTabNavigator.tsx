@@ -3,6 +3,9 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { createStackNavigator } from '@react-navigation/stack'
 import * as React from 'react'
 
+/**
+ * 切换BottomTab主题
+ */
 import Colors from '../constants/Colors'
 import useColorScheme from '../hooks/useColorScheme'
 
@@ -12,11 +15,16 @@ import TabTwoScreen from '../screens/TabTwoScreen'
 import FavoritesScreen from '../screens/FavoritesScreen'
 import MeScreen from '../screens/MeScreen'
 
-import FavoritesSvg from '../assets/svgs/FavoritesSvg'
-import MeSvg from '../assets/svgs/MeSvg'
-import IndexSvg from '../assets/svgs/IndexSvg'
+import { FavoritesSvg, IndexSvg, MeSvg } from '../assets/svgs/index'
 
-import { BottomTabParamList,IndexParamList, TabOneParamList, TabTwoParamList, FavoritesParamList, MeParamList } from '../types'
+import {
+  BottomTabParamList,
+  IndexParamList,
+  TabOneParamList,
+  TabTwoParamList,
+  FavoritesParamList,
+  MeParamList,
+} from '../types'
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>()
 
@@ -97,7 +105,11 @@ const IndexStack = createStackNavigator<IndexParamList>()
 function IndexNavigator() {
   return (
     <IndexStack.Navigator>
-      <IndexStack.Screen name="IndexScreen" component={IndexScreen} options={{ headerTitle: 'Index', headerShown: false }} />
+      <IndexStack.Screen
+        name="IndexScreen"
+        component={IndexScreen}
+        options={{ headerTitle: 'Index', headerShown: false }}
+      />
     </IndexStack.Navigator>
   )
 }

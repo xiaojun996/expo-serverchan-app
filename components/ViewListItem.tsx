@@ -1,7 +1,7 @@
 import { ListItem } from 'react-native-elements'
-import SettingSvg from '../assets/svgs/SettingSvg'
 import React from 'react'
 
+import { SettingSvg } from '../assets/svgs/index'
 import { useThemeColor } from './Themed'
 
 type ThemeProps = {
