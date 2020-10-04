@@ -11,8 +11,8 @@ type ThemeProps = {
 
 type ListItemProps = ThemeProps & ListItem['props']
 
-export default function ViewListItem(props: ListItemProps) {
-  const { style, lightColor, darkColor, onPress } = props
+const ViewListItem: React.FunctionComponent<ListItemProps> = props => {
+  const { style, lightColor, darkColor, onPress, title } = props
   const color = useThemeColor({ light: lightColor, dark: darkColor }, 'text')
   const backgroundColor = useThemeColor({ light: lightColor, dark: darkColor }, 'containerBackground')
 
@@ -21,10 +21,12 @@ export default function ViewListItem(props: ListItemProps) {
       <SettingSvg width={24} height={24} />
 
       <ListItem.Content>
-        <ListItem.Title style={[{ color }]}>{'Setting'}</ListItem.Title>
+        <ListItem.Title style={[{ color }]}>{title}</ListItem.Title>
       </ListItem.Content>
 
       <ListItem.Chevron />
     </ListItem>
   )
 }
+
+export default ViewListItem

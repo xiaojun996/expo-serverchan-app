@@ -1,6 +1,7 @@
-import { StackScreenProps } from '@react-navigation/stack'
-import { StyleSheet } from 'react-native'
 import { useDeviceOrientation } from '@react-native-community/hooks'
+import { StackScreenProps } from '@react-navigation/stack'
+import { CommonActions } from '@react-navigation/native'
+import { StyleSheet } from 'react-native'
 import { Image } from 'react-native-elements'
 import Constants from 'expo-constants'
 import React from 'react'
@@ -40,10 +41,28 @@ export default function MeScreen({ navigation }: StackScreenProps<RootStackParam
 
         {/* ListItem列表 */}
         <View style={{ width: '100%', paddingTop: 8 }}>
-          <ViewListItem onPress={() => navigation.push('Setting')} />
-          <ViewListItem onPress={() => navigation.push('Setting')} />
-          <ViewListItem onPress={() => navigation.push('Setting')} />
-          <ViewListItem onPress={() => navigation.push('Setting')} />
+          <ViewListItem title="Setting" onPress={() => navigation.push('Setting')} bottomDivider />
+
+          <ViewListItem title="Setting" onPress={() => navigation.push('Setting')} bottomDivider />
+
+          <ViewListItem
+            title="Details"
+            onPress={() =>
+              navigation.dispatch(
+                CommonActions.navigate({
+                  name: 'Details',
+                  params: {
+                    id: 123,
+                    text: '从MeScreen来的',
+                  },
+                })
+              )
+            }
+            bottomDivider
+            style={{ marginBottom: 8 }}
+          />
+
+          <ViewListItem title="Setting" onPress={() => navigation.push('Setting')} bottomDivider />
         </View>
       </View>
     </ScrollView>
