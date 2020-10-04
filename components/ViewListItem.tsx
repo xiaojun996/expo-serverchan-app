@@ -11,7 +11,7 @@ type ThemeProps = {
 
 type ListItemProps = ThemeProps & ListItem['props']
 
-export default function ItemListItem(props: ListItemProps) {
+export default function ViewListItem(props: ListItemProps) {
   const { style, lightColor, darkColor, onPress } = props
   const color = useThemeColor({ light: lightColor, dark: darkColor }, 'text')
   const backgroundColor = useThemeColor({ light: lightColor, dark: darkColor }, 'containerBackground')

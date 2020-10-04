@@ -6,7 +6,7 @@ import Constants from 'expo-constants'
 import React from 'react'
 
 import { Text, View, ScrollView } from '../components/Themed'
-import ItemListItem from '../components/ItemListItem'
+import ViewListItem from '../components/ViewListItem'
 
 import { RootStackParamList } from '../types'
 
@@ -20,26 +20,30 @@ export default function MeScreen({ navigation }: StackScreenProps<RootStackParam
     <ScrollView>
       <View style={[styles.container, !portrait && { paddingTop: 0 }]}>
         {/* 顶部头像、姓名、二维码等 */}
-        <View style={styles.profile}>
-          <View style={styles.profileInfo}>
+        <View style={styles.profile} lightColor="#fff" darkColor="#202020">
+          <View style={styles.profileInfo} lightColor="#fff" darkColor="#202020">
             <Image
               source={{ uri: 'https://cdn.jsdelivr.net/gh/xiaojun996/CDN/images/profile/02.比企谷八幡.png' }}
               style={{ width: 64, height: 64, marginLeft: 24, marginRight: 24, borderRadius: 5 }}
             />
 
-            <View style={{ justifyContent: 'space-between', paddingTop: 4, paddingBottom: 4 }}>
+            <View
+              style={{ justifyContent: 'space-between', paddingTop: 4, paddingBottom: 4 }}
+              lightColor="#fff"
+              darkColor="#202020"
+            >
               <Text style={{ fontSize: 22, fontWeight: 'bold' }}>晓</Text>
               <Text style={{ fontSize: 16, fontWeight: '200' }}>WeChat ID: Aishiteru996</Text>
             </View>
           </View>
         </View>
 
-        {/* NotFound */}
+        {/* ListItem列表 */}
         <View style={{ width: '100%', paddingTop: 8 }}>
-          <ItemListItem onPress={() => navigation.push('Setting')} />
-          <ItemListItem onPress={() => navigation.push('Setting')} />
-          <ItemListItem onPress={() => navigation.push('Setting')} />
-          <ItemListItem onPress={() => navigation.push('Setting')} />
+          <ViewListItem onPress={() => navigation.push('Setting')} />
+          <ViewListItem onPress={() => navigation.push('Setting')} />
+          <ViewListItem onPress={() => navigation.push('Setting')} />
+          <ViewListItem onPress={() => navigation.push('Setting')} />
         </View>
       </View>
     </ScrollView>
