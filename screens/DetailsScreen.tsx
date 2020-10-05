@@ -12,19 +12,17 @@ export default function DetailsScreen({
   navigation,
   route: { params },
 }: StackScreenProps<RootStackParamList, 'Details'>) {
-  const { text }: any = params
+  const { text }: any = params || {}
 
-  const [postText, setPostText] = useState(text)
+  const [postText, setPostText] = useState(text || '')
 
   return (
     <ScrollView>
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text>详情 Screen</Text>
-
         <TextInput
           multiline
           placeholder="你在想什么?"
-          style={{ height: 50, padding: 10, backgroundColor: 'white' }}
+          style={{ width: '80%', height: 50, padding: 10, backgroundColor: 'white' }}
           value={postText}
           onChangeText={setPostText}
         />

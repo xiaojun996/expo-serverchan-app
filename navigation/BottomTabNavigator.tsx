@@ -45,10 +45,10 @@ export default function BottomTabNavigator() {
         options={{
           title: 'Index',
           tabBarBadge: undefined,
-          tabBarIcon: ({ size, color }) => <IndexSvg width={size} height={size} color={color} />,
+          tabBarIcon: ({ size, color }) => <IndexSvg style={{ marginBottom: -8 }} width={size} height={size} color={color} />,
         }}
       />
-      <BottomTab.Screen
+      {/* <BottomTab.Screen
         name="TabOne"
         component={TabOneNavigator}
         options={{
@@ -63,14 +63,14 @@ export default function BottomTabNavigator() {
           title: '标签二',
           tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
         }}
-      />
+      /> */}
       <BottomTab.Screen
         name="Favorites"
         component={FavoritesNavigator}
         options={{
           title: 'Favorites',
           tabBarBadge: `···`,
-          tabBarIcon: ({ size, color }) => <FavoritesSvg width={size} height={size} color={color} />,
+          tabBarIcon: ({ size, color }) => <FavoritesSvg style={{ marginBottom: -8 }} width={size} height={size} color={color} />,
         }}
       />
       <BottomTab.Screen
@@ -79,7 +79,7 @@ export default function BottomTabNavigator() {
         options={{
           title: 'Me',
           tabBarBadge: `1`,
-          tabBarIcon: ({ size, color }) => <MeSvg width={size} height={size} color={color} />,
+          tabBarIcon: ({ size, color }) => <MeSvg style={{ marginBottom: -8 }} width={size} height={size} color={color} />,
         }}
       />
     </BottomTab.Navigator>
@@ -90,7 +90,7 @@ export default function BottomTabNavigator() {
 // 您可以在以下位置浏览网络上的内置图标系列和图标:
 // https://icons.expo.fyi/
 function TabBarIcon(props: { name: string; color: string }) {
-  return <Ionicons size={30} style={{ marginBottom: -3 }} {...props} />
+  return <Ionicons size={30} style={{ marginBottom: 0 }} {...props} />
 }
 
 // Each tab has its own navigation stack, you can read more about this pattern here:
