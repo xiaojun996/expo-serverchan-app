@@ -8,6 +8,7 @@ import BottomTabNavigator from './BottomTabNavigator'
 import NotFoundScreen from '../screens/NotFoundScreen'
 import SettingScreen from '../screens/SettingScreen'
 import DetailsScreen from '../screens/DetailsScreen'
+import MyProfileScreen from '../screens/MyProfileScreen'
 
 import LinkingConfiguration from './LinkingConfiguration'
 
@@ -36,7 +37,7 @@ const Stack = createStackNavigator<RootStackParamList>()
  */
 function RootNavigator() {
   return (
-    <Stack.Navigator initialRouteName="Login" screenOptions={{ headerShown: false }}>
+    <Stack.Navigator initialRouteName="Login" screenOptions={{ headerShown: false, headerBackTitleVisible: false}}>
       {/* 登录 页面 */}
       <Stack.Screen name="Login" component={Login} options={{ headerShown: true, headerTitle: '登录' }} />
 
@@ -51,10 +52,13 @@ function RootNavigator() {
       />
 
       {/* 设置 页面 */}
-      <Stack.Screen name="Setting" component={SettingScreen} options={{ headerShown: true, headerTitle: '设置' }} />
+      <Stack.Screen name="Setting" component={SettingScreen} options={{ headerShown: true, headerTitle: 'Setting' }} />
 
       {/* 详情 页面 */}
-      <Stack.Screen name="Details" component={DetailsScreen} options={{ headerShown: true, headerTitle: '详情' }} />
+      <Stack.Screen name="Details" component={DetailsScreen} options={{ headerShown: true, headerTitle: 'Details' }} />
+
+      {/* 我的资料 页面 */}
+      <Stack.Screen name="MyProfile" component={MyProfileScreen} options={{ headerShown: true, headerTitle: 'MyProfile' }} />
     </Stack.Navigator>
   )
 }

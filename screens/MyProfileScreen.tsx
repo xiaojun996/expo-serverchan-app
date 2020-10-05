@@ -9,25 +9,17 @@ import ViewListItem from '../components/ViewListItem'
 import { RootStackParamList } from '../types'
 
 /**
- * 设置
+ * 我的资料
  */
-export default function SettingScreen({
+export default function MyProfileScreen({
   navigation,
   route: { params },
-}: StackScreenProps<RootStackParamList, 'Setting'>) {
+}: StackScreenProps<RootStackParamList, 'MyProfile'>) {
   return (
     <View style={[styles.container]}>
       <ViewListItem
-        titleStyle={{ alignItems: 'center' }}
-        title="Log Out"
-        onPress={() =>
-          navigation.dispatch(
-            CommonActions.reset({
-              index: 0,
-              routes: [{ name: 'Login' }],
-            })
-          )
-        }
+        title="Profile Photo"
+        rightAvatarUrl="https://cdn.jsdelivr.net/gh/xiaojun996/CDN/images/profile/02.比企谷八幡.png"
       />
     </View>
   )
@@ -39,6 +31,5 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     alignItems: 'center',
     width: '100%',
-    paddingTop: 5,
   },
 })

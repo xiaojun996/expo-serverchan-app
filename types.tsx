@@ -1,9 +1,10 @@
 export type RootStackParamList = {
   Login: undefined
   Root: undefined
-  NotFound: undefined
   Setting: undefined
   Details: undefined
+  MyProfile: undefined
+  NotFound: undefined
 }
 
 export type BottomTabParamList = {

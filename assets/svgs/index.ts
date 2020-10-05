@@ -1,4 +1,6 @@
 export { default as FavoritesSvg } from './FavoritesSvg'
 export { default as IndexSvg } from './IndexSvg'
 export { default as MeSvg } from './MeSvg'
+export { default as MyProfileSvg } from './MyProfileSvg'
 export { default as SettingSvg } from './SettingSvg'
+export { default as ToolsSvg } from './ToolsSvg'
